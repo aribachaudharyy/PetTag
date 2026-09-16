@@ -47,9 +47,6 @@ const pets = {
 // OWNER PHONE NUMBER
 // ========================================
 
-// Apna actual number yahan daalna.
-// Example:
-// const ownerPhone = "919876543210";
 
 const ownerPhone = "918779022561";
 

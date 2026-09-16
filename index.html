@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PetTag 🐾</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <main class="container">
 
-        <div class="welcome-page">
+        <div class="card">
 
-    <div class="welcome-icon">
-        🐱
-    </div>
+            <!-- WELCOME MESSAGE -->
+            <div class="welcome-page">
 
-    <h1>Hello! 🐾</h1>
+                <div class="welcome-icon">
+                    🐱
+                </div>
 
-    <p>
-        If u are reading this, it means I am lost
-        and in good hands!!
-    </p>
+                <h1>Hello! 🐾</h1>
 
-    <h2>
-        Please call my owner!!!!
-    </h2>
+                <p>
+                    If u are reading this, it means I am lost
+                    and in good hands!!
+                </p>
 
-    <p class="thank-you">
-        Thank you ❤️
-    </p>
+                <h2>
+                    Please call my owner!!!!
+                </h2>
 
-</div>
+                <p class="thank-you">
+                    Thank you ❤️
+                </p>
+
+            </div>
+
+
+            <!-- PET INFORMATION -->
+
+            <div class="tag">
+                🐾 PETTAG
+            </div>
+
+            <div class="found-message">
+                If you found this cat, please help us bring them home ❤️
+            </div>
 
             <img
                 id="petImage"
@@ -43,9 +61,14 @@
                 alt="Pet"
             >
 
-            <h1 id="petName">Pet Name</h1>
+            <h1 id="petName">
+                Pet Name
+            </h1>
 
             <p id="description" class="description"></p>
+
+
+            <!-- PET DETAILS -->
 
             <div class="details">
 
@@ -71,6 +94,9 @@
 
             </div>
 
+
+            <!-- LOCATION -->
+
             <div id="locationStatus" class="location-status">
                 📍 Location permission is required to share your location.
             </div>
@@ -81,6 +107,9 @@
             >
                 📍 Send My Location
             </button>
+
+
+            <!-- CALL OWNER -->
 
             <a
                 id="callButton"
@@ -98,7 +127,9 @@
 
     </main>
 
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
