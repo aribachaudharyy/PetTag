@@ -22,8 +22,8 @@ const pets = {
         age: "3 years",
         breed: "Indie",
         colour: "Your Colour",
-        gender: "Male",
-        image: "images/pandu.jpg",
+        gender: "Female",
+        image: "images/pandu1.jpg",
 
         description:
             "Pandu is a loved family cat. If you found her, please contact her owner."
@@ -35,7 +35,7 @@ const pets = {
         age: "3 years",
         breed: "Indie",
         colour: "Your Colour",
-        gender: "Male",
+        gender: "Female",
         image: "images/sheru.jpg",
 
         description:
