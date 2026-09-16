@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetTag 🐾</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="card">
+
+            <div class="tag">
+                🐾 PET-TAG
+            </div>
+
+            <div class="found-message">
+                If you found this cat, please help us bring her home ❤️
+            </div>
+
+            <img
+                id="petImage"
+                class="pet-image"
+                src=""
+                alt="Pet"
+            >
+
+            <h1 id="petName">Pet Name</h1>
+
+            <p id="description" class="description"></p>
+
+            <div class="details">
+
+                <div class="detail-box">
+                    <span>Age</span>
+                    <strong id="petAge"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>Breed</span>
+                    <strong id="petBreed"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>Colour</span>
+                    <strong id="petColour"></strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>Gender</span>
+                    <strong id="petGender"></strong>
+                </div>
+
+            </div>
+
+            <div id="locationStatus" class="location-status">
+                📍 Location permission is required to share your location.
+            </div>
+
+            <button
+                class="location-btn"
+                onclick="sendLocation()"
+            >
+                📍 Send My Location
+            </button>
+
+            <a
+                id="callButton"
+                class="call-btn"
+                href="#"
+            >
+                📞 Call Owner
+            </a>
+
+            <p class="small-text">
+                Your location will only be shared if you allow location access.
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
