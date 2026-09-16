@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PetTag 🐾</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -19,36 +16,28 @@
 
         <div class="card">
 
-            <!-- WELCOME MESSAGE -->
-            <div class="welcome-page">
-
-                <div class="welcome-icon">
-                    🐱
-                </div>
-
-                <h1>Hello! 🐾</h1>
-
-                <p>
-                     I am lost!
-                </p>
-
-                <h2>
-                    Please call my owner!!!!
-                </h2>
-
-            </div>
-
-
-            <!-- PET INFORMATION -->
-
+            <!-- PETTAG -->
             <div class="tag">
                 🐾 PETTAG
             </div>
 
+
+            <!-- LOST MESSAGE -->
             <div class="found-message">
-                If you found this cat, please help us bring them home ❤️
+
+                <strong>I am lost!</strong>
+                <br>
+
+                Please call my owner!!!!
+
+                <br><br>
+
+                Thank you ❤️
+
             </div>
 
+
+            <!-- CAT IMAGE -->
             <img
                 id="petImage"
                 class="pet-image"
@@ -56,46 +45,71 @@
                 alt="Pet"
             >
 
+
+            <!-- CAT NAME -->
             <h1 id="petName">
                 Pet Name
             </h1>
 
-            <p id="description" class="description"></p>
+
+            <!-- DESCRIPTION -->
+            <p
+                id="description"
+                class="description"
+            ></p>
 
 
             <!-- PET DETAILS -->
-
             <div class="details">
 
                 <div class="detail-box">
+
                     <span>Age</span>
+
                     <strong id="petAge"></strong>
+
                 </div>
 
+
                 <div class="detail-box">
+
                     <span>Breed</span>
+
                     <strong id="petBreed"></strong>
+
                 </div>
 
+
                 <div class="detail-box">
+
                     <span>Colour</span>
+
                     <strong id="petColour"></strong>
+
                 </div>
 
+
                 <div class="detail-box">
+
                     <span>Gender</span>
+
                     <strong id="petGender"></strong>
+
                 </div>
 
             </div>
 
 
-            <!-- LOCATION -->
-
-            <div id="locationStatus" class="location-status">
+            <!-- LOCATION STATUS -->
+            <div
+                id="locationStatus"
+                class="location-status"
+            >
                 📍 Location permission is required to share your location.
             </div>
 
+
+            <!-- SEND LOCATION BUTTON -->
             <button
                 class="location-btn"
                 onclick="sendLocation()"
@@ -104,8 +118,7 @@
             </button>
 
 
-            <!-- CALL OWNER -->
-
+            <!-- CALL OWNER BUTTON -->
             <a
                 id="callButton"
                 class="call-btn"
@@ -114,6 +127,8 @@
                 📞 Call Owner
             </a>
 
+
+            <!-- SMALL NOTE -->
             <p class="small-text">
                 Your location will only be shared if you allow location access.
             </p>
