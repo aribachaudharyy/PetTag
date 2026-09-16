@@ -16,24 +16,26 @@ const pets = {
             "Luna is a loved family cat. If you found her, please contact her owner."
     },
 
+
     pandu: {
         name: "Pandu",
         age: "3 years",
         breed: "Indie",
-        colour: "White and Black with stripes on the back leg",
-        gender: "Female",
+        colour: "Your Colour",
+        gender: "Male",
         image: "images/pandu.jpg",
 
         description:
             "Pandu is a loved family cat. If you found her, please contact her owner."
     },
 
+
     sheru: {
         name: "Sheru",
         age: "3 years",
         breed: "Indie",
-        colour: "Tabby Cat",
-        gender: "Female",
+        colour: "Your Colour",
+        gender: "Male",
         image: "images/sheru.jpg",
 
         description:
@@ -52,57 +54,99 @@ const ownerPhone = "918779022561";
 
 
 // ========================================
-// GET CAT FROM QR LINK
+// GET PET FROM URL
 // ========================================
 
 const urlParams = new URLSearchParams(
     window.location.search
 );
 
-const petID = urlParams.get("pet") || "luna";
-
-
-// If wrong pet ID is used,
-// Luna will be shown instead.
-
-const pet = pets[petID] || pets.luna;
+const petID = urlParams.get("pet");
 
 
 // ========================================
-// DISPLAY CAT INFORMATION
+// CHECK PET
 // ========================================
 
-document.getElementById("petName").textContent =
-    pet.name;
-
-document.getElementById("petImage").src =
-    pet.image;
-
-document.getElementById("petImage").alt =
-    pet.name;
-
-document.getElementById("description").textContent =
-    pet.description;
-
-document.getElementById("petAge").textContent =
-    pet.age;
-
-document.getElementById("petBreed").textContent =
-    pet.breed;
-
-document.getElementById("petColour").textContent =
-    pet.colour;
-
-document.getElementById("petGender").textContent =
-    pet.gender;
+const pet = pets[petID];
 
 
 // ========================================
-// CALL OWNER
+// IF NO VALID PET ID
 // ========================================
 
-document.getElementById("callButton").href =
-    "tel:+" + ownerPhone;
+if (!pet) {
+
+    document.getElementById("petName").textContent =
+        "PetTag";
+
+    document.getElementById("description").textContent =
+        "Please scan a valid PetTag QR code.";
+
+    document.getElementById("petImage").style.display =
+        "none";
+
+    document.querySelector(".details").style.display =
+        "none";
+
+    document.getElementById("locationStatus").style.display =
+        "none";
+
+    document.querySelector(".location-btn").style.display =
+        "none";
+
+    document.getElementById("callButton").style.display =
+        "none";
+
+}
+
+
+// ========================================
+// DISPLAY PET INFORMATION
+// ========================================
+
+else {
+
+    document.getElementById("petName").textContent =
+        pet.name;
+
+
+    document.getElementById("petImage").src =
+        pet.image;
+
+
+    document.getElementById("petImage").alt =
+        pet.name;
+
+
+    document.getElementById("description").textContent =
+        pet.description;
+
+
+    document.getElementById("petAge").textContent =
+        pet.age;
+
+
+    document.getElementById("petBreed").textContent =
+        pet.breed;
+
+
+    document.getElementById("petColour").textContent =
+        pet.colour;
+
+
+    document.getElementById("petGender").textContent =
+        pet.gender;
+
+
+    // ========================================
+    // CALL OWNER
+    // ========================================
+
+    document.getElementById("callButton").href =
+        "tel:+" + ownerPhone;
+
+}
 
 
 // ========================================
@@ -119,12 +163,20 @@ const locationStatus =
 
 function sendLocation() {
 
+    if (!pet) {
+
+        return;
+
+    }
+
+
     if (!navigator.geolocation) {
 
         locationStatus.textContent =
             "❌ Location is not supported on this device.";
 
         return;
+
     }
 
 
@@ -138,6 +190,7 @@ function sendLocation() {
 
             const latitude =
                 position.coords.latitude;
+
 
             const longitude =
                 position.coords.longitude;
@@ -179,6 +232,7 @@ function sendLocation() {
             locationStatus.textContent =
                 "❌ Location permission was not allowed.";
 
+
             alert(
                 "Please allow location permission to share your location."
             );
@@ -195,4 +249,5 @@ function sendLocation() {
         }
 
     );
+
 }
