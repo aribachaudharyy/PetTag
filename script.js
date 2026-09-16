@@ -10,7 +10,6 @@ const pets = {
         breed: "Indie",
         colour: "Calico",
         gender: "Female",
-        image: "images/luna.jpg",
 
         description:
             "Luna is a loved family cat. If you found her, please contact her owner."
@@ -21,9 +20,8 @@ const pets = {
         name: "Pandu",
         age: "3 years",
         breed: "Indie",
-        colour: "Your Colour",
+        colour: "White and Black with same stripes in back legs",
         gender: "Female",
-        image: "images/pandu1.jpg",
 
         description:
             "Pandu is a loved family cat. If you found her, please contact her owner."
@@ -34,9 +32,8 @@ const pets = {
         name: "Sheru",
         age: "3 years",
         breed: "Indie",
-        colour: "Your Colour",
+        colour: "Tabby Cat",
         gender: "Female",
-        image: "images/sheru.jpg",
 
         description:
             "Sheru is a loved family cat. If you found her, please contact her owner."
@@ -48,13 +45,11 @@ const pets = {
 // ========================================
 // OWNER PHONE NUMBER
 // ========================================
-
-
 const ownerPhone = "918779022561";
 
 
 // ========================================
-// GET PET FROM URL
+// GET PET FROM QR LINK
 // ========================================
 
 const urlParams = new URLSearchParams(
@@ -63,16 +58,11 @@ const urlParams = new URLSearchParams(
 
 const petID = urlParams.get("pet");
 
-
-// ========================================
-// CHECK PET
-// ========================================
-
 const pet = pets[petID];
 
 
 // ========================================
-// IF NO VALID PET ID
+// CHECK PET
 // ========================================
 
 if (!pet) {
@@ -82,9 +72,6 @@ if (!pet) {
 
     document.getElementById("description").textContent =
         "Please scan a valid PetTag QR code.";
-
-    document.getElementById("petImage").style.display =
-        "none";
 
     document.querySelector(".details").style.display =
         "none";
@@ -108,14 +95,6 @@ if (!pet) {
 else {
 
     document.getElementById("petName").textContent =
-        pet.name;
-
-
-    document.getElementById("petImage").src =
-        pet.image;
-
-
-    document.getElementById("petImage").alt =
         pet.name;
 
 
@@ -164,9 +143,7 @@ const locationStatus =
 function sendLocation() {
 
     if (!pet) {
-
         return;
-
     }
 
 
@@ -176,7 +153,6 @@ function sendLocation() {
             "❌ Location is not supported on this device.";
 
         return;
-
     }
 
 

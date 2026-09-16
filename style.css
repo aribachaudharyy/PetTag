@@ -40,7 +40,7 @@ body {
 
     border-radius: 25px;
 
-    padding: 25px;
+    padding: 30px 25px;
 
     text-align: center;
 
@@ -53,13 +53,13 @@ body {
 .tag {
     color: #e91e63;
 
-    font-size: 14px;
+    font-size: 15px;
 
     font-weight: bold;
 
     letter-spacing: 1px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 
@@ -72,61 +72,25 @@ body {
 
     line-height: 1.5;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 
 .found-message strong {
     color: #e91e63;
 
-    font-size: 22px;
+    font-size: 25px;
 }
 
 
-/* IMAGE CONTAINER */
-
-.image-container {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    margin-bottom: 18px;
-}
-
-
-/* CAT IMAGE */
-
-.pet-image {
-    width: 240px;
-
-    height: 240px;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    border-radius: 20px;
-
-    border: 5px solid #f8bbd0;
-
-    background: #fff7fa;
-
-    display: block;
-}
-
-
-/* CAT NAME */
+/* PET NAME */
 
 h1 {
     color: #333;
 
-    font-size: 30px;
+    font-size: 32px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 
@@ -137,9 +101,9 @@ h1 {
 
     font-size: 15px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 
@@ -163,7 +127,7 @@ h1 {
 
     border-radius: 14px;
 
-    padding: 13px;
+    padding: 15px 10px;
 }
 
 
@@ -174,7 +138,7 @@ h1 {
 
     font-size: 12px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 
@@ -192,7 +156,7 @@ h1 {
 
     border-radius: 12px;
 
-    padding: 12px;
+    padding: 13px;
 
     color: #555;
 
@@ -216,7 +180,7 @@ button,
 
     border-radius: 14px;
 
-    padding: 15px;
+    padding: 16px;
 
     font-size: 16px;
 
@@ -279,26 +243,24 @@ button:hover,
 
 
     .card {
-        padding: 20px;
+        padding: 25px 18px;
 
         border-radius: 20px;
     }
 
 
-    .pet-image {
-        width: 220px;
-
-        height: 220px;
-    }
-
-
     h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
 
     .found-message {
         font-size: 14px;
+    }
+
+
+    .found-message strong {
+        font-size: 23px;
     }
 
 }
